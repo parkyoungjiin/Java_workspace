@@ -27,7 +27,7 @@ class MyDate{
 	int month;
 	int day;
 	
-	public MyDate() {
+	public MyDate() { // 기본 생성자
 		// 연도 : 1990, 월 : 1 , 일  : 1로 초기화
 		
 //		this(1900, 1);
@@ -36,7 +36,7 @@ class MyDate{
 		//this 사용 시 첫 번째로 와야 한다.
 		System.out.println("MyDate 생성자 호출됨.");
 		
-		year = 1900;
+		year = 1900; //생성자 내에서 또 다른 생성자를 호출한다.
 		month = 1;
 		day = 1;
 		
