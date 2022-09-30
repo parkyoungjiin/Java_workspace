@@ -81,23 +81,32 @@ public class Ex4 {
 		System.out.println("=======================");
 		
 		//메서드에 다형성 활용
-		//1. 이미 다형성이 적용된 배열을 메서드 파라미터로 전달
+		//1. 이미 다형성이 적용된 배열을 메서드 파라미터로 전달 (호출할 때 무언가를 넣어 파라미터로 전달하겠다)
 		
 		
-		polymorphismDraw();
+		
+		polymorphismDraw(sArr);
 		
 		
-		//2. 메서드 파라미터로 인스턴스를 직접 전달
-		
+		//2. 메서드 파라미터로 인스턴스를 직접 전달(new키워드로 생성되는 인스턴스 활용)
+		polymorphismDraw2(new Circle());
+		polymorphismDraw2(new Rectangle());
+		polymorphismDraw2(new Triangle());
 		
 		
 		
 	}//main 메서드 끝
-
+	
+	public static void polymorphismDraw(Shape[] sArr) {
+		 // 반복
+		for(int i = 0 ; i < sArr.length ; i++) {
+			 sArr[i].draw();
+		}
+	}
 	
 	
-	public static void polymorphismDraw() {
-		 
+	public static void polymorphismDraw2(Shape s) {
+		s.draw();
 	}
 }//Ex4 클래스 끝
 

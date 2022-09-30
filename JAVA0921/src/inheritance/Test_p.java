@@ -19,6 +19,7 @@ class Person {
 	boolean isHungry;
 	
 	public Person() {
+		super();
 		System.out.println("Person()생성자 출력됨!");
 	}
 	
@@ -38,7 +39,7 @@ class Student extends Person{
 	}
 	public Student(String name, int age, boolean isHungry, boolean isStudyMode) {
 		super();
-		
+		this.isStudyMode = isStudyMode;
 		System.out.println("Student(String name, int age, boolean isHungry, boolean isStudyMode) 생성자 호출됨!");
 		System.out.println("이름 : " + name + ", 나이 : " + age + ", 배고픔 : " + isHungry + ", 공부모드 : " + isStudyMode);
 	}
