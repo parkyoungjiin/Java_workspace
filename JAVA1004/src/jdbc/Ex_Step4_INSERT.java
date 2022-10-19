@@ -32,17 +32,17 @@ public class Ex_Step4_INSERT {
 			// 따라서, 만능문자(=wildcard = ? ) 처리를 하여 우선 객체를 생성하고
 			// setXXX메서드를 통해 데이터를 바인딩 처리해주는 것이 좋다.
 			
-//			String sql = "INSERT INTO test VALUES(?)";
-//			pstmt = con.prepareStatement(sql);
-//			// setXXX메서드를 통해 데이터를 바인딩 처리
+		String sql = "INSERT INTO test VALUES(?)";
+			pstmt = con.prepareStatement(sql);
+			// setXXX메서드를 통해 데이터를 바인딩 처리
 //			pstmt.setInt(1, idx);//앞 파라미터는 ?의 순서 (1이면 첫번째꺼), 해석하면 첫 번째 ?에 idx값을 넣는다.
 			
 //			pstmt.executeUpdate();
-			String sql = "INSERT INTO student VALUES(?, ?, ?)";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, 1); //indx
-			pstmt.setInt(2, 1); //id
-			pstmt.setString(3, "Park"); //name
+//			String sql = "INSERT INTO test VALUES(?, ?, ?)";
+//			pstmt = con.prepareStatement(sql);
+//			pstmt.setInt(1, 2); //indx
+//			pstmt.setInt(2, 2); //id
+//			pstmt.setString(3, "Kim"); //name
 			
 			
 			//4. sql 구문 실행 및 결과 처리
@@ -52,7 +52,7 @@ public class Ex_Step4_INSERT {
 			
 			// 경우 2번 => INSERT 구문의 경우 성공하면 1, 실패 시 예외가 발생한다.
 			
-			int result = pstmt.executeUpdate(); // 실행 결과를 result에 저장
+			int result = pstmt.executeUpdate(); // 실행 결과를 result에 저장 (성공 시 성공된 만큼 정수가 입력, 실패 시 실패딘 만큼 정수가 입력됨.)
 			// => 실행결과리턴(INSERT 된 레코드 수)
 			
 			if(result > 0) {
