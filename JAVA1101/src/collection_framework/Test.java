@@ -2,6 +2,7 @@ package collection_framework;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
@@ -59,6 +60,14 @@ public class Test {
 		
 		
 		//2. Iterator 사용
+		Iterator<Integer> ite = myLotto.iterator();
+		while(ite.hasNext()) {
+			int num = ite.next();
+			if(thisWeekLotto.contains(num)) {
+				count++;
+			}
+		
+		}
 		
 			
 			
