@@ -52,7 +52,7 @@ public class Ex {
       System.out.println("-----------------------------------");
       
       Outer.StaticInner staticInner = new Outer.StaticInner();
-      
+      staticInner.innserStaticMethod();
    }
 }
 
@@ -102,7 +102,7 @@ class Outer { // 외부클래스
    static class StaticInner{
       int innerNum = 200;
       
-      static int innerStaticNum = 200;
+      static int innerStaticNum = 300;
       
       
       public void innerMethod() {
