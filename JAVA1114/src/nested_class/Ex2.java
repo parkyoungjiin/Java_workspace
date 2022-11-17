@@ -14,13 +14,13 @@ public class Ex2 {
 class Outer2 {
 	private int num = 10; // 인스턴스 멤버변수
 	
-	public void method() {
+	public void method() { // 메서드 안에 클래스 정의 -> *** Method Local Inner Class (지역 클래스) ***
 		System.out.println(num); 
 		
 //		public int num2 = 20; // 지역(로컬) 변수
 		// => 컴파일 에러 발생!
 		// => Illegal modifier for parameter num2; only final is permitted
-		// => 로컬 변수에서는 접근제한자를 사용할 수 없다!
+		// => 지역(로컬) 변수에서는 접근제한자를 사용할 수 없다!
 		//    외부에서 접근이 불가능하므로 접근제한자가 의미가 없긴 때문
 		
 		// 로컬 내부 클래스에 접근하기 위해서는
