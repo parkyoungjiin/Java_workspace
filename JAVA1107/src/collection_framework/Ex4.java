@@ -43,7 +43,7 @@ public class Ex4 {
 		//entrySet() : 키=값 을 한 쌍으로 갖는 엔트리 객체를 Set 타입으로 리턴
 		
 		Set entryset = map.entrySet();
-		System.out.println(entryset);
+		System.out.println("entryset : " +entryset);
 		
 		System.out.println("-----------------------------");
 		Map<String, String> map2 = new HashMap<String, String>();
